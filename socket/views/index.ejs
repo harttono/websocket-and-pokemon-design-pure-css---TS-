@@ -6,11 +6,56 @@
   <title>Chat App</title>
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
+  <style>
+    #room-container{
+      background-color:#CCC;
+      height:60px;
+      width:30%;
+      padding:0.3rem;
+      box-sizing:border-box;
+      height:auto;
+    }
+    #room-container > div {
+      margin-bottom:0.1rem;
+    }
+    #room-container > a{
+      width:100%;
+      background-color:#7F66FF;
+      margin:0.2rem 0;
+      padding:0.3rem;
+      box-sizing:border-box;
+      border-radius:0.4rem;
+      text-decoration:none;
+      display:inline-block;
+      color:#fff;
+      text-align: center;
+    }
+    form {
+      width:30%;
+      margin-top:0.5rem;
+      display:flex;
+      justify-content:space-around;
+    }
+    form input{
+      width:70%;
+      padding:0.4rem;
+      border-radius:0.4rem;
+      background:transparent;
+      border:2px solid #7F66FF;
+    }
+    form button{
+      width:25%;
+      padding:0.4rem;
+      border-radius:0.4rem;
+      background: #7F66FF;
+      color:#fff;
+    }
+  </style>
 </head>
 <body>
   <div id="room-container">
     <% Object.keys(rooms).forEach(room => { %>
-      <div><%= room %></div>
+      <div>  Group's name :<%= room %></div>
       <a href="/<%= room %>">Join</a>
     <% }) %>
   </div>
