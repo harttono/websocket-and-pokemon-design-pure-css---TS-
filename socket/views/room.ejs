@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script>
+    const roomName = "<%= roomName %>"
+  </script>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+    }
+    .container{
+      display:flex;
+      justify-content:space-between;
+      height:100vh;
+    }
+    #message-container div{
+      background-color: #CCC;
+      padding: 5px;
+    }
+    #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+    input{
+      width:70%;
+      border-radius:0.2rem;
+      padding:0.2rem;
+      background:transparent;
+      border:2px #dedede solid;
+    }
+    button{
+      width:25%;
+      padding:0.2rem;
+      border-radius:0.2rem;
+    }
+    #send-container{
+      padding:0.5rem;
+    }
+    .display-area{
+      flex:1 1 30rem;
+    }
+    .display-area-game{
+      flex:2 1 60rem;
+      background-color:#eaeaea;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <div class="display-area">
+      <div id="message-container"></div>
+      <form id="send-container">
+          <input type="text" id="message-input">
+          <button type="submit" id="send-button">Send</button>
+      </form>
+    </div>
+    <div class="display-area-game"></div>
+</div>
+</body>
+</html>

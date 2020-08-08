@@ -1,0 +1,391 @@
+:root {
+--color-primary:#A1D7E4;
+--color-secondary:#3276B3;
+--color-white: #ffffff;
+--color-black: #000000;
+--color-mouth: 	#dbc300;
+--color-leg:#dbc300;
+  }
+.head-session{
+    height:auto;
+    position: relative;
+}  
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:100px auto;
+    height:400px;
+    width:500px;
+}
+/* Head Of Pokemons */
+.head{
+    height:200px;
+    width:227px;
+    border-top-left-radius:47%;
+    border-top-right-radius:45%;
+    border-bottom-right-radius:37%;
+    border-bottom-left-radius:44%;
+    position: relative;
+    background-color:var(--color-secondary);
+    border:2px #111 solid;
+    overflow: hidden;
+    z-index:40;
+    border-bottom:none;
+}
+.head::after{
+    content:"";
+    display:block;
+    height:50%;
+    width:30%;
+    opacity:0.6;
+    border-radius:50%;
+    position:absolute;
+    box-shadow:inset 6px 64px 100px rgba(77,150,178, 0.8);
+    top:23px;
+    left:22px;
+    transform:rotate(17deg);
+}
+.face-shade1{
+    z-index:1;
+    top:45px;
+    right:-16px;
+    background-color:var(--color-primary);
+    position: absolute;
+    width:25px;
+    height:18px;
+    transform:rotate(21deg);
+    border-left: solid 2px black;
+}
+.face-shade2{
+    z-index:12;
+    right:16px;
+    top:47px;
+    background-color:var(--color-primary);
+    position: absolute;
+    width:27px;
+    height:27px;
+    transform: rotate(302deg);
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+}
+.face-shade3{
+    z-index:8;
+    right:48px;
+    top:66px;
+    background-color:var(--color-primary);
+    position: absolute;
+    width:26px;
+    height:30px;
+    transform: rotate(82deg);
+    border-left: solid 2px black;
+}
+.face-shadeCover{
+    width:115px;
+    height:99px;
+    position:absolute;
+    right:-34px;
+    top:63px;
+    border:none;
+    background-color:var(--color-primary);
+    transform: rotate(164deg);
+}
+.eyes {
+    position: absolute;
+    background-color:var(--color-white);
+    border:solid 2px black;
+    width:125px;
+    height:106px;
+    right:7px;
+    top:68px;
+    border-top-left-radius: 299%;
+    border-top-right-radius:476%;
+    border-bottom-left-radius:433%;
+    border-bottom-right-radius:244px;
+    z-index:60;
+    transform:rotate(-4deg);
+}
+.sclera{
+    right:8px;
+    top:6px;
+    position: absolute;
+    width:11px;
+    height:19px;
+    border-radius: 50% / 50%;
+    background-color:var(--color-white);
+}
+
+.iris{
+    right:7px;
+    top:14px;
+    position: absolute;
+    width:15px;
+    height:25px;
+    border-radius: 50% / 50%;
+    background-color:var(--color-black);
+}
+.pupil{
+    right:-47px;
+    top:32px;
+    position: relative;
+    transform:rotate(-16deg);
+    width: 30px;
+    height: 50px;
+    border-radius: 50% / 50%;
+    background-color:var(--color-secondary);
+}
+.mouth-upper{
+    z-index: 48;
+    right:-16px;
+    top:107px;
+    border:solid 2px black;
+    background-color:var(--color-mouth);
+    width:26px; 
+    height:32px; 
+    border-top-left-radius:178%;
+    border-top-right-radius:157%;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:33px;
+    transform:rotate(-11deg);
+    position: absolute;   
+    overflow: hidden !important; 
+}
+.mouth-lower{
+    z-index:48;
+    right:-13px;
+    top:141px;
+    border:solid 2px black;
+    background-color:var(--color-mouth);
+    width:19px; 
+    height:6px; 
+    border-bottom-left-radius:121%;
+    border-bottom-right-radius:129%;
+    border-top-left-radius:70%;
+    border-top-right-radius:111%;
+    transform:rotate(350deg);
+    position: absolute;    
+}
+
+/* Body Of Pokemon */
+.body-container{
+    position: relative;
+    width:193px; 
+    height:160px; 
+}
+.body{
+    left:22px;
+    position: relative;
+    z-index:30;
+    border:solid 2px black;
+    background-color:var(--color-primary);
+    width:146px; 
+    height:132px; 
+    border-radius:11% 11% 48% 38%/54% 58% 39% 57%;
+    transform:rotate(-5deg);
+
+}
+
+.left-wing{
+    z-index:23;
+    left:106px;
+    top:-24px;
+    border:solid 2px black;
+    background-color:var(--color-secondary);
+    width:46px; 
+    height:87px;
+    border-radius:50%/50%; 
+    position:absolute;    
+    transform:rotate(-71deg);
+    /* border-left:none */
+}
+
+.right-wing{
+    z-index:23;
+    left:61px;
+    top:-18px;
+    border:solid 2px black;
+    background-color:var(--color-secondary);
+    width:70px; 
+    height:79px;
+    border-radius:50%/50%; 
+    border-left:none;
+    border-top:none;
+    border-bottom:none;
+    transform:rotate(110deg);
+    position:absolute;    
+}
+.tail{
+    position:absolute;
+    top:-34px;
+    left:5px;
+    width:38px;
+    height:101px;
+    border-radius:50%/50%;
+    background-color:var(--color-secondary);
+    border:solid 2px black;
+    transform:rotate(55deg);
+    z-index:22;
+}
+.left-small-tail{
+    position:absolute;
+    top:-15px;
+    left:-23px;
+    width:44px;
+    height:18px;
+    border-top-left-radius:92%;
+    border-bottom-left-radius:64%;
+    background-color:var(--color-secondary);
+    border:solid 2px black;
+    z-index:20;
+    transform:rotate(43deg);
+}
+.right-small-tail{
+    position:absolute;
+    top:-17px;
+    left:0px;
+    width:20px;
+    height:10px;
+    border-top-left-radius:50%;
+    border-bottom-left-radius:50%;
+    background-color:var(--color-secondary);
+    border:solid 2px black;
+    z-index:20;
+    transform:rotate(54deg);
+}
+.front-left-wing{
+    position:absolute;
+    top:40px;
+    left:18px;
+    width:34px;
+    height:70px;
+    border-radius:47%/40%;
+    background-color:var(--color-primary);
+    border:solid 2px black;
+    z-index:20;
+    transform:rotate(6deg);
+    border-top:none;
+
+}
+.front-right-wing{
+    position: relative;
+    top:-109px;
+    right:-153px;
+    width:21px;
+    height:60px;
+    padding:0 6px;
+    border-top-right-radius:20%;
+    border-top-left-radius:20%;
+    border-bottom-right-radius:60%;
+    border-bottom-left-radius:60%;
+    background-color:var(--color-primary);
+    border:solid 2px black;
+    border-top:none;
+    border-left:none;
+}
+.left-dot-wing{
+    position:absolute;
+    top:45px;
+    left:85px;
+    width:10px;
+    height:34px;
+    padding:0 6px;
+    border-radius:50%/50%;
+    background-color:var(--color-white);
+    border:solid 2px black;
+    z-index:20;
+    border-top:none;
+}
+.right-dot-wing{
+    position:absolute;
+    top:49px;
+    left:134px;
+    width:1px;
+    height:27px;
+    padding:0 6px;
+    border-radius:50%/50%;
+    background-color:var(--color-white);
+    border:solid 2px black;
+    z-index:24;
+    border-right:none;
+    transform:rotate(5deg);
+}
+
+/* Footer Session */
+.foot-container{
+    position: relative;
+    width:193px; 
+    height:160px; 
+}
+.left-foot{
+    position:absolute;
+    top:-56px;
+    left:55px;
+    width:25px;
+    height:75px;
+    padding:0 6px;
+    border-top-right-radius:20%;
+    border-top-left-radius:20%;
+    border-bottom-right-radius:60%;
+    border-bottom-left-radius:60%;
+    background-color:var(--color-leg);
+    border:solid 2px black;
+    z-index:20;
+    display:flex;
+    justify-content:space-around;
+    overflow: hidden;
+    transform: rotateZ(-64deg);
+}
+.left-foot::after{
+    content:"";
+    position:absolute;
+    height:41px;
+    right:23px;
+    top:25px;
+    border:1px solid #121212;
+    background-color:var(--color-leg);
+}
+.left-foot::before{
+    content:"";
+    position:absolute;
+    height:34px;
+    right:6px;
+    top:29px;
+    border:1px solid #121212;
+    background-color:var(--color-leg);
+}
+ .right-foot{
+    position:absolute;
+    top:-56px;
+    right:13px;
+    width:30px;
+    height:49px;
+    border-top-right-radius:20%;
+    border-top-left-radius:20%;
+    border-bottom-right-radius:60%;
+    border-bottom-left-radius:60%;
+    background-color:var(--color-leg);
+    border:solid 2px black;
+    z-index:20;
+    display:flex;
+    justify-content:space-around;
+    overflow: hidden;
+    transform: rotateZ(-64deg);
+} 
+.right-foot::after{
+    content:"";
+    position:absolute;
+    height:34px;
+    right:20px;
+    top:15px;
+    border:1px solid #121212;
+    background-color:var(--color-leg);
+}
+.right-foot::before{
+    content:"";
+    position:absolute;
+    height:34px;
+    right:5px;
+    top:15px;
+    border:1px solid #121212;
+    background-color:var(--color-leg);
+}
